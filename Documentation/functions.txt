@@ -1,0 +1,63 @@
+    Funções em C são blocos de codigos que realizam ações especificas, elas são usadas para tornar os codigos mais limpos, e principalmente para serem reutilizadas em inumeras operações.
+
+Sua estrutura basica se constitue de:
+
+return_type function_name(parameter1_type parameter1_name, parameter2_type parameter2_name, ...) {
+    {code to be executed}
+    return value; // if the return_type is not void
+}
+
+
+    Return_type:
+Quando uma função é definida, em c, é necessario definir que tipo de valor esta função retorna. Chamamos isso de tipo de retorno.
+Quando escrevemos 'int' antes da função, estamos especificando que está função retornará um valor do tipo  'int'.
+
+
+    Parametros:
+Funções em C podem aceitar parametros (as vezes chamados de 'argumentos'), que são valores passados para a função quando ela é chamada.
+Declarar uma função que aceita dois parametros é assim:
+int add(int a, int b) {
+    return a + b;
+}
+Nessa função exemplo, 'add' é uma função que reccebe dois inteiros como parametros e retorna sua soma.
+
+
+    Recursão:
+Recursão é uma técnica em que uma função se autodenomina para resolver um problema. É como resolver um grande problema dividindo-o em problemas menores e semelhantes. Por exemplo uma função recursiva simples que calcula fatorial:
+int factorial(int n) {
+    // Base case: factorial of 0 or 1 is 1
+    if (n <= 1) {
+        return 1;
+    }
+    
+    // Recursive case: n! = n * (n-1)!
+    return n * factorial(n - 1);
+}
+Toda função recursiva precisa: 
+- Um caso base para parar a recursão 
+- Um caso recursivo que se move em direção ao caso base 
+Por exemplo, calculando o fatorial(3): 
+fatorial(3) chama factorial(2) 
+fatorial(2) chama factorial(1) 
+fatorial(1) retorna 1 (caso base) 
+fatorial(2) retorna 2 * 1 = 2 
+fatorial(3) retorna 3 * 2 = 6
+
+
+    Prototipos de função:
+Em C, é possivel declarar uma função antes dela ser usada/estruturada. Um prototipo de função diz ao compilador o nome da função, o tipo de retorno da função e os parametros da função antes mesmo da propria função ser definida.
+Por exemplo, primeiro se cria o prototipo de função para adicionar duas variaveis:
+int add(int a, int b);
+Depois, cria-se a função main:
+int main() {
+    int result = add(5, 3);
+    printf("%d", result);
+    return 0;
+}
+Depois, define-se a função:
+int add(int a, int b) {
+    return a + b;
+}
+
+Normalmente o prototipo de função vem acima da main, enquanto a função em si, vem depois da main, assim o codigo aparece de forma mais limpa e organizada.
+Sem o protótipo, se chamar a função antes da definição, haverá um erro no compilador.
