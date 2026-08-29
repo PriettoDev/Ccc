@@ -1,1 +1,16 @@
+# Executáveis gerados pela compilação (Windows/GCC)
 *.exe
+*.out
+*.o
+*.obj
+
+# Pastas de saída de compilação
+output/
+**/output/
+
+# Arquivos temporários comuns de editores/SO
+*.tmp
+Thumbs.db
+
+# Configurações locais do VS Code (específicas de cada máquina)
+.vscode/
