@@ -1,77 +1,76 @@
-+    Declaração de ARRAYS (vetores):
-Arrays (vetores) em C permitem guardar multiplos valores do mesmo tipo em uma unica variavel.
-Por exemplo declarar um vetor inteiro com 5 elementos:
-    int numero[5]; -> Isso cria um vetor chamado "numero" que pode guardar 5 inetiros.
+Declaração de ARRAYS (vetores):
+    Arrays (vetores) em C permitem guardar multiplos valores do mesmo tipo em uma unica variavel.
+    Por exemplo declarar um vetor inteiro com 5 elementos:
+        int numero[5]; -> Isso cria um vetor chamado "numero" que pode guardar 5 inetiros.
 
-Também é possivel  inicializar um veotr com valores quando o declara:
-    int numero[5] = {1, 2, 3, 4, 5};
+    Também é possivel  inicializar um veotr com valores quando o declara:
+        int numero[5] = {1, 2, 3, 4, 5};
 
-Se ao criar um vetor e não determinar seu tamanho logo de cara, mas ao mesmo tempo declarar todos os seus valores, C irá determinar o tamanho do vetor. Por exemplo:
-    int numero[] = {1, 2, 3, 4, 5};
+    Se ao criar um vetor e não determinar seu tamanho logo de cara, mas ao mesmo tempo declarar todos os seus valores, C irá determinar o tamanho do vetor. Por exemplo:
+        int numero[] = {1, 2, 3, 4, 5};
 
-    O compilador C vai automaticamente criar um vetor de tamanho 5 com esses 5 elementos declarados.
+        O compilador C vai automaticamente criar um vetor de tamanho 5 com esses 5 elementos declarados.
 
-Lembrando que o primeiro elemento do vetor tem sempre o index 0.
-
-
-
-+   Acessando elementos dentro de um ARRAY (vetor):
-Usa-se a posição do index de um vetor para acessar elementos individuais em um vetor.
-Em C, o index de um vetor começa em 0, ou seja, o primeiro elemento em um vetor está na posição de index 0, o segundo na posição de index 1, e por ai vai.
-
-Ao criar um vetor com 5 elementos, para acessar um de seus elementos fazemos assim:
-    int numero[5] = {1, 2, 3, 4, 5};
-    int primeiroElemento = numero[0]; --> ao printar isso, "primeiroElemento" irá conter o elemento "1".
-
-se fizermos:
-    int terceiroElemento = numero[2]; --> Isso amarzena na variavel terceiroElemento o valor "3".
-
-Tentar acessar um elemento fora do vetor (como numero[5], por exemplo) leva a um comportamento indefinido, o que pode causar um crash no programa.
+    Lembrando que o primeiro elemento do vetor tem sempre o index 0.
 
 
 
-+  Modificando elemntos de um ARRAY (vetor):
-Em C, é possivel modificar valores de um vetor após eles terem sido inicializados.
-Se um vetor de 5 elementos for inicializado:
-    int numero[5] = {1, 2, 3, 4, 5};
+Acessando elementos dentro de um ARRAY (vetor):
+    Usa-se a posição do index de um vetor para acessar elementos individuais em um vetor.
+    Em C, o index de um vetor começa em 0, ou seja, o primeiro elemento em um vetor está na posição de index 0, o segundo na posição de index 1, e por ai vai.
 
-Para modificar um elemento, usa-se o nome do vetor com a posição do index dentro de chaves "[]":
-    numero[2] = 35; --> Isso muda o terceiro elemento (index 2) para 35
+    Ao criar um vetor com 5 elementos, para acessar um de seus elementos fazemos assim:
+        int numero[5] = {1, 2, 3, 4, 5};
+        int primeiroElemento = numero[0]; --> ao printar isso, "primeiroElemento" irá conter o elemento "1".
 
-Após executar o codigo, o vetor numero irá conter:
-[1, 2, 35, 4, 5]
+    se fizermos:
+        int terceiroElemento = numero[2]; --> Isso amarzena na variavel terceiroElemento o valor "3".
 
-Também é possivel usar variaveis como index:
-    int index = 4;
-    numero[index] = 55; --> Muda o quinto elemento para 55
-
-agora o vetor contem:
-[1, 2, 35, 4, 55]
+    Tentar acessar um elemento fora do vetor (como numero[5], por exemplo) leva a um comportamento indefinido, o que pode causar um crash no programa.
 
 
-+   Matriz:
-Uma matriz em C (vetor multidimensional), é um vetor de um vetor, basicamente uma tabela com colunas e linhas.
-Declarar um vetor matrix 2D:
-    int matrix[3][4]; --> Isso cria uma matriz de 3 linhas e 4 colunas.
 
-É possivel inicializar uma matriz quando se declara ela desta forma:
-    int matrix[3][4] = {
-    {1, 2, 3, 4},    // First row
-    {5, 6, 7, 8},    // Second row
-    {9, 10, 11, 12}  // Third row
-};
+Modificando elemntos de um ARRAY (vetor):
+    Em C, é possivel modificar valores de um vetor após eles terem sido inicializados.
+    Se um vetor de 5 elementos for inicializado:
+        int numero[5] = {1, 2, 3, 4, 5};
 
-Para acessar valores de uma matriz, deve-se usar dois indices:
-    int value = matrix[1][2];  // Accesses row 1, column 2 (value will be 7)
+    Para modificar um elemento, usa-se o nome do vetor com a posição do index dentro de chaves "[]":
+        numero[2] = 35; --> Isso muda o terceiro elemento (index 2) para 35
 
-E para modificar elementos de uma matriz também é necessario usar dois indices
-    matrix[0][3] = 100;  // Changes the element at row 0, column 3 to 100
+    Após executar o codigo, o vetor numero irá conter:
+    [1, 2, 35, 4, 5]
 
-Pode-se usar loops aninhados para acessar todos os elementos em uma matriz 2D:
-    for (int i = 0; i < 3; i++) {
-        for (int j = 0; j < 4; j++) {
-            printf("%d ", matrix[i][j]);
+    Também é possivel usar variaveis como index:
+        int index = 4;
+        numero[index] = 55; --> Muda o quinto elemento para 55
+
+    agora o vetor contem:
+    [1, 2, 35, 4, 55]
+
+
+Matriz:
+    Uma matriz em C (vetor multidimensional), é um vetor de um vetor, basicamente uma tabela com colunas e linhas.
+    Declarar um vetor matrix 2D:
+        int matrix[3][4]; --> Isso cria uma matriz de 3 linhas e 4 colunas.
+
+    É possivel inicializar uma matriz quando se declara ela desta forma:
+        int matrix[3][4] = {
+        {1, 2, 3, 4},    // First row
+        {5, 6, 7, 8},    // Second row
+        {9, 10, 11, 12}  // Third row
+    };
+
+    Para acessar valores de uma matriz, deve-se usar dois indices:
+        int value = matrix[1][2];  // Accesses row 1, column 2 (value will be 7)
+
+    E para modificar elementos de uma matriz também é necessario usar dois indices
+        matrix[0][3] = 100;  // Changes the element at row 0, column 3 to 100
+
+    Pode-se usar loops aninhados para acessar todos os elementos em uma matriz 2D:
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 4; j++) {
+                printf("%d ", matrix[i][j]);
+            }
+            printf("\n");  // New line after each row
         }
-        printf("\n");  // New line after each row
-    }
-
