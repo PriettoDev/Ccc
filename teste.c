@@ -94,3 +94,45 @@
 //         return fibonacci(n-1)+fibonacci(n-2);
 // }
 
+// int main(){
+//     int n, i = 1;
+//     printf("Digite um numero inteiro: ");
+//     scanf("%d", &n);
+
+//     while(i<=10){
+//         printf("%d * %d = %d\n", n, i, n*i);
+//         i++;
+//     }
+//     return 0;
+// }
+
+// int main(){
+//     int n, num;
+
+//     num=1;
+//     while(num<=5){
+//         n=1;
+//         while (n<=10){
+//             printf("%2d * %2d = %2d\n", num, n, n*num);
+//             n++;
+//         }
+//         num++;
+//         putchar('\n');
+//     }
+// }
+
+// int main(){
+//     int i, j;
+
+//     for(i=1; i<=5; i++){
+//         for(j=1; j<=10; j++){
+//             printf("%2d * %2d = %2d\n", i, j, i*j);
+
+//             if(i!=5){
+//                 printf("Pressione <ENTER> para continuar...");
+//                 getchar();
+//             }
+//         }
+//     }
+// }
+
