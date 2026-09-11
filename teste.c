@@ -136,3 +136,18 @@
 //     }
 // }
 
+// int main(){
+//     int i, j;
+//     int n = 3;
+//     char ch = '*';
+
+//     printf("Introduza um Nº: "); scanf("%d", &n);
+//     printf("Introduza um char: "); scanf(" %c", &ch);
+
+//     for(i=1; i<=n; i++){
+//         for(j=1; j<=n; j++){
+//             putchar(ch);
+//         }
+//         putchar('\n');
+//     }
+// }
