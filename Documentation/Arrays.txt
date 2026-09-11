@@ -74,3 +74,30 @@ Matriz:
             }
             printf("\n");  // New line after each row
         }
+
+
+Vetores como parametros de funções:
+    Vetores podem ser passados como argumentos de funções. Quando um vetor é passado para a função, o que realmente está sendo passado é o endereço de memoria do primeiro elemento.
+
+    Ex.: Uma função que recebe um vetor como argumento:
+        void displayArray(int arr[], int size) {
+            for(int i = 0; i < size; i++) {
+                printf("%d ", arr[i]);
+            }   
+            printf("\n");
+        }
+    
+    Criando um vetor e passando para a função:
+        int numbers[5] = {10, 20, 30, 40, 50};
+        displayArray(numbers, 5);
+
+    Agora ao passa o vetor para a função, todas as mudanças que ocorrerem no vetor dentro da função irão afetar o vetor original, não uma copia. (estamos passando o vetor como referencia, não como copia)
+        void doubleValues(int arr[], int size) {
+            for(int i = 0; i < size; i++) {
+                arr[i] = arr[i] * 2;
+            }
+        }
+
+        // Call the function
+        doubleValues(numbers, 5);
+        // Now numbers contains: {20, 40, 60, 80, 100}
