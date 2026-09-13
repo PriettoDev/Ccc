@@ -151,3 +151,27 @@
 //         putchar('\n');
 //     }
 // }
+
+// int linha(){
+//     int i;
+//     for(i=1; i<=20; i++){
+//         putchar('*');
+//     }
+//     putchar('\n');
+
+//     return 0;
+// }
+
+// int main(){
+//     int i;
+
+//     linha();
+//     puts("N° entre 1 e 5");
+//     linha();
+
+//     for(i=1; i<=5; i++)
+//         printf("%d\n", i);
+
+//     linha();
+// }
+

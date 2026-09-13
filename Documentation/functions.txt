@@ -62,3 +62,31 @@ Prototipos de função:
 
     Normalmente o prototipo de função vem acima da main, enquanto a função em si, vem depois da main, assim o codigo aparece de forma mais limpa e organizada.
     Sem o protótipo, se chamar a função antes da definição, haverá um erro no compilador.
+
+
+Função do "tipo" void:
+Em C, a palavra "void" indica uma função que não devolve qualquer tipo (não tem return).
+A palavra reservada "void" também pode ser usada para indicar que uma função não recebe nenhum tipo de parametro. Uma função que "retorna void" normalmente é chamada de "Procedimento".
+    A função void pode ser escrita da seguinte maneira:
+        *void* linha(){
+            int i;
+            for(i=1; i<=20; i++){
+                putchar('*');
+            }
+            putchar('\n');
+        }
+
+    Mas as vezes, caso queira, pode-se colocar o termo void dentro dos parenteses da função para indicar que ela não recebe nenhum parametro:
+        *void* linha(*void*){
+            int i;
+            for(i=1; i<=20; i++){
+                putchar('*');
+            }
+            putchar('\n');
+        }
+
+    Dentro da função que está invocando a função void, é possivel colocar o termo void dentro dos parenteses para reforçar o entendimento que está trabalhando com uma função do tipo void (que não recebe qualquer argumento), colocando o termo void dentro dos parenteses.
+    ex.:
+        int main(){
+            linha(void);
+        }
