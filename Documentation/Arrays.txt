@@ -13,6 +13,9 @@ Declaração de ARRAYS (vetores):
 
     Lembrando que o primeiro elemento do vetor tem sempre o index 0.
 
+    Tal como as variaveis, os vetores quando criados contêm inicialmente valores aleatórios (lixo) em cada uma das suas posições.
+
+    Se ao criar um vetor com n elementos, e inicialmente for colocado apenas k elementos dentro do vetor (k<n) na carga inicial do vetor, então os primeiros k elementos do vetor serão iniciados com os respectivos valores e os restantes serão iniciados com o valor ZERO.
 
 
 Acessando elementos dentro de um ARRAY (vetor):
