@@ -194,3 +194,21 @@
 //     }
 //     printf("Total Anual: %9.2f\n", total);
 // }
+
+int main(){
+    char s[100];
+    char *p = s;
+
+    printf("Escreva um texto: "); gets(s);
+
+    if(*p=='\0')
+        return 0;
+
+    while(*p!='\0')
+        putchar(*p++);
+
+    p--;
+
+    while(p>=s)
+        putchar(*p--);
+}

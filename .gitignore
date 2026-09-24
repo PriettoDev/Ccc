@@ -7,6 +7,7 @@
 # Pastas de saída de compilação
 output/
 **/output/
+output
 
 # Arquivos temporários comuns de editores/SO
 *.tmp
@@ -14,3 +15,6 @@ Thumbs.db
 
 # Configurações locais do VS Code (específicas de cada máquina)
 .vscode/
+
+# Auto detect text files and perform LF normalization
+* text=auto
