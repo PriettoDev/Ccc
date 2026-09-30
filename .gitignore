@@ -3,6 +3,7 @@
 *.out
 *.o
 *.obj
+.output
 
 # Pastas de saída de compilação
 output/
